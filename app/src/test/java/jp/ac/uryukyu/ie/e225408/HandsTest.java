@@ -20,6 +20,20 @@ public class HandsTest {
 
     }
 
+    void Flush(){
+
+        GamePlayers testPlayer = new GamePlayers("Test");
+        testPlayer.setHand(new CardCard("スペード", "5"));
+        testPlayer.setHand(new CardCard("ハート", "5"));
+        testPlayer.setHand(new CardCard("ダイヤ", "5"));
+        testPlayer.setHand(new CardCard("クローバー", "J"));
+        testPlayer.setHand(new CardCard("スペード", "J"));
+
+        boolean testResult = Hands.isFlush(testPlayer.getHand());
+        assertTrue(testResult);
+
+    }
+
     void FullHouseTest(){
 
         GamePlayers testPlayer = new GamePlayers("Test");
@@ -33,5 +47,7 @@ public class HandsTest {
         assertTrue(testResult);
 
     }
+
+    
 
 }

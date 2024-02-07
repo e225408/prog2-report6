@@ -235,7 +235,7 @@ public class Hands {
      * @param allCards 判定するカードのリスト。
      * @return 手札がフラッシュである場合はtrue、そうでない場合はfalse。
      */    
-    private static boolean isFlush(ArrayList<CardCard> allCards) {     
+    static boolean isFlush(ArrayList<CardCard> allCards) {     
         if (allCards.size() < 5) {
             return false;
         }   
