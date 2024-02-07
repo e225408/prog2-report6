@@ -15,12 +15,12 @@ public class CardDecks {
 
     /**
      * Deckクラスのコンストラクタ。
-     * 52枚のカードを生成してcardsに追加します。
+     * 52枚のカードを生成してcardsに追加する。
      */
     public CardDecks() {
         this.cards = new ArrayList<CardCard>();
 
-        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
+        String[] suits = { "Diamonds", "Clubs", "Spades","Hearts"};
         String[] ranks = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
         
         for (String suit : suits) {

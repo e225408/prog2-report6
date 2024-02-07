@@ -24,7 +24,7 @@ public class CardCard {
     }
 
     /**
-     * このカードのスートを返します。
+     * このカードのスートを返す。
      * @return スートを表す文字列
      */
     public String getSuit() {
@@ -32,7 +32,7 @@ public class CardCard {
     }
 
     /**
-     * このカードのランクを返します。
+     * このカードのランクを返す。
      * @return ランクを表す文字列
      */
     public String getRank() {
