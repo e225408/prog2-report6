@@ -5,6 +5,21 @@ import static org.junit.jupiter.api.Assertions.*;
 public class HandsTest {
 
     @Test
+
+    void StraightFlushTest(){
+
+        GamePlayers testPlayer = new GamePlayers("Test");
+        testPlayer.setHand(new CardCard("クローバー", "5"));
+        testPlayer.setHand(new CardCard("クローバー", "6"));
+        testPlayer.setHand(new CardCard("クローバー", "7"));
+        testPlayer.setHand(new CardCard("クローバー", "8"));
+        testPlayer.setHand(new CardCard("クローバー", "9"));
+
+        boolean testResult = Hands.isStraightFlush(testPlayer.getHand());
+        assertTrue(testResult);
+
+    }
+
     void FullHouseTest(){
 
         GamePlayers testPlayer = new GamePlayers("Test");
@@ -18,5 +33,5 @@ public class HandsTest {
         assertTrue(testResult);
 
     }
-    
+
 }

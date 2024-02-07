@@ -162,7 +162,7 @@ public class Hands {
      * @param allCards 判定するカードのリスト。
      * @return 手札がストレートフラッシュである場合はtrue、そうでない場合はfalse。
      */    
-    private static boolean isStraightFlush(ArrayList<CardCard> allCards) {
+    static boolean isStraightFlush(ArrayList<CardCard> allCards) {
         if (isFlush(allCards) && (isStraight(allCards))) {
             return true;
         }
