@@ -169,7 +169,7 @@ public class Games {
         String playerHand = Hands.evaluateHand(player, this);
         String botHand = Hands.evaluateHand(bot, this);
 
-        // 役の強さを表すマップ(辞書型的なもの)
+        // 役の強さを表すマップ
         Map<String, Integer> handStrengths = new HashMap<>();
         handStrengths.put(Hands.HIGH_CARD, 1);
         handStrengths.put(Hands.ONE_PAIR, 2);
@@ -270,8 +270,8 @@ public class Games {
     }
 
     /**
-     * ボットに行動を選択させます。
-     * ボットにはベット、コール、チェック、フォールドのオプションが提供されます。
+     * ボットに行動を選択させる。
+     * ボットにはベット、コール、チェック、フォールドのオプションが提供される。
      */    
     public void botAction() {
         Random random = new Random();

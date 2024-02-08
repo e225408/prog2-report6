@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 import java.util.List;
 
 /**
- * ポーカーゲームのプレイヤーを表現するクラス。
- * プレイヤーの名前、手札、スコア、ステータス、現在のベット額を管理します。
+ * ポーカーゲームのプレイヤーを表すクラス。
+ * プレイヤーの名前、手札、スコア、ステータス、現在のベット金額を管理します。
  */
 public class GamePlayers {
     /**
@@ -17,7 +17,7 @@ public class GamePlayers {
      */
     private String name;
     /**
-     * プレイヤーの手札を表すArrayList。
+     * プレイヤーの手札カードを表すArrayList。
      */
     private ArrayList<CardCard> hand;
     /**
@@ -66,7 +66,7 @@ public class GamePlayers {
     }
 
     /**
-     * プレイヤーのハンドにカードを追加するメソッド。
+     * プレイヤーの手札にカードを追加するメソッド。
      * @param card 追加するカードのオブジェクト。
      */
     public void setHand(CardCard card){
@@ -75,7 +75,7 @@ public class GamePlayers {
 
     /**
      * プレイヤーの手札を返すメソッド。
-     * @return プレイヤーのハンドを表すArrayList。
+     * @return プレイヤーの手札を表すArrayList。
      */    
     public ArrayList<CardCard> getHand() {
         return hand;
@@ -187,7 +187,7 @@ public class GamePlayers {
     }
 
     /**
-     * プレイヤーのデータ（ハンド）をリセットするメソッド。
+     * プレイヤーのデータ（手札）をリセットするメソッド。
      */    
     public void resetData() {
         setStatus(true);

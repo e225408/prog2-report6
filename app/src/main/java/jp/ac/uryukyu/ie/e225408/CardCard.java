@@ -5,11 +5,11 @@ package jp.ac.uryukyu.ie.e225408;
  */
 public class CardCard {
     /**
-     * カードのスート（ハート、ダイヤ、クラブ、スペード）
+     * カードのスートの種類（ダイヤ、クラブ、スペード、ハート）
      */
     private String suit;
     /**
-     * カードのランク（A、2、3、...、J、Q、K）
+     * カードのランクの種類（A、2、3、...、J、Q、K）
      */
     private String rank;
 
