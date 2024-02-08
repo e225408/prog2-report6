@@ -256,13 +256,64 @@ public class Hands {
         return false;  
     }
 
+
+     /**
+     * 手札がストレートフラッシュであるかどうかを判定するメソッド。
+     * @param allCards 判定するカードのリスト。
+     * @return 手札がストレートフラッシュである場合はtrue、そうでない場合はfalse。
+     */    
+    static boolean isFlush(ArrayList<CardCard> allCards) {
+        if (allCards.size() < 5) {
+            return false;
+        }
+    
+        // 各スートについて調べる
+        for (String suit : new String[]{SPADES, HEARTS, DIAMONDS, CLUBS}) {
+            // 指定したスートのカードを抽出
+            ArrayList<CardCard> sameSuitCards = new ArrayList<>();
+            for (CardCard card : allCards) {
+                if (card.getSuit().equals(suit)) {
+                    sameSuitCards.add(card);
+                }
+            }
+    
+            // 同じスートのカードが5枚以上存在し、それらが10からAの連続したランクを持つかどうかを調べる
+            if (sameSuitCards.size() >= 5) {
+                boolean has10 = false, hasJ = false, hasQ = false, hasK = false, hasA = false;
+                for (CardCard card : sameSuitCards) {
+                    switch (card.getRank()) {
+                        case "10":
+                            has10 = true;
+                            break;
+                        case "J":
+                            hasJ = true;
+                            break;
+                        case "Q":
+                            hasQ = true;
+                            break;
+                        case "K":
+                            hasK = true;
+                            break;
+                        case "A":
+                            hasA = true;
+                            break;
+                    }
+                }
+                if (has10 && hasJ && hasQ && hasK && hasA) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     /**
      * 手札がフラッシュであるかどうかを判定するメソッド。
      * @param allCards 判定するカードのリスト。
      * @return 手札がフラッシュである場合はtrue、そうでない場合はfalse。
-     */    
+     *    
     static boolean isFlush(ArrayList<CardCard> allCards) {     
-        if (allCards.size() < 5) {
+        if (allCards.size() < 6) {
             return false;
         }   
         // 各スートのカードの数を格納する配列を用意
@@ -295,6 +346,9 @@ public class Hands {
 
         return false;
     }
+
+    */
+
 
     /**
      * 手札がストレートであるかどうかを判定するメソッド。
