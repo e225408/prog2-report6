@@ -7,62 +7,49 @@ import java.util.ArrayList;
  * ポーカーの役を表す定数とスートを表す定数を持ちます。
  */
 public class Hands {
-    /**
-     * ロイヤルフラッシュを表す定数。
-     */
+    /*ロイヤルフラッシュを表す定数。*/
     public static final String ROYAL_FLUSH = "Royal Flush";
-    /**
-     * ストレートフラッシュを表す定数。
-     */
+
+    /*ストレートフラッシュを表す定数。*/
     public static final String STRAIGHT_FLUSH = "Straight Flush";
-    /**
-     * フォーカードを表す定数。
-     */
+
+    /* フォーカードを表す定数。*/
     public static final String FOUR_OF_A_KIND = "Four of a Kind";
-    /**
-     * フルハウスを表す定数。
-     */
+
+    /* フルハウスを表す定数。*/
     public static final String FULL_HOUSE = "Full House";
-    /**
-     * フラッシュを表す定数。
-     */
+
+    /*フラッシュを表す定数。*/
     public static final String FLUSH = "Flush";
-    /**
-     * ストレートを表す定数。
-     */
+
+    /*ストレートを表す定数。*/
     public static final String STRAIGHT = "Straight";
-    /**
-     * スリーカードを表す定数。
-     */
+
+    /*スリーカードを表す定数。*/
     public static final String THREE_OF_A_KIND = "Three of a Kind";
-    /**
-     * ツーペアを表す定数。
-     */
+
+    /*ツーペアを表す定数。*/
     public static final String TWO_PAIR = "Two Pair";
-    /**
-     * ワンペアを表す定数。
-     */
+
+    /*ワンペアを表す定数。*/
     public static final String ONE_PAIR = "One Pair";
-    /**
-     * ハイカードを表す定数。
-     */
+
+    /*ハイカードを表す定数。*/
     public static final String HIGH_CARD = "High Card";
-    /**
-     * スペードのスートを表す定数。
-     */
+
+    /*スペードのスートを表す定数。*/
     private static final String SPADES = "Spades";
-    /**
-     * ハートのスートを表す定数。
-     */
+
+    /*ハートのスートを表す定数。*/
     private static final String HEARTS = "Hearts";
-    /**
-     * ダイヤモンドのスートを表す定数。
-     */
+
+    /*ダイヤモンドのスートを表す定数。*/
     private static final String DIAMONDS = "Diamonds";
-    /**
-     * クラブのスートを表す定数。
-     */
+
+    /*クラブのスートを表す定数。*/
     private static final String CLUBS = "Clubs";
+
+
 
     /**
      * プレイヤーの手札を評価します。

@@ -10,6 +10,7 @@ public class CardCard {
     private String suit;
     /**
      * カードのランクの種類（A、2、3、...、J、Q、K）
+       カードの強さ：A（エース）一番強い～2一番弱い
      */
     private String rank;
 
