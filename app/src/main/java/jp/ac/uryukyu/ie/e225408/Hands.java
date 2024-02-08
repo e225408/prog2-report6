@@ -129,42 +129,81 @@ public class Hands {
     
             // 同じスートのカードが5枚以上存在し、それらが10からエースの連続したランクを持つかどうかを調べる
             if (sameSuitCards.size() >= 5) {
-                boolean has10 = false, hasJ = false, hasQ = false, hasK = false, hasA = false;
+                boolean has5 = false, has6 = false, has7 = false, has8 = false, has9 = false;
                 for (CardCard card : sameSuitCards) {
                     switch (card.getRank()) {
-                        case "10":
-                            has10 = true;
+                        case "5":
+                            has5 = true;
                             break;
-                        case "J":
-                            hasJ = true;
+                        case "6":
+                            has6 = true;
                             break;
-                        case "Q":
-                            hasQ = true;
+                        case "7":
+                            has7 = true;
                             break;
-                        case "K":
-                            hasK = true;
+                        case "8":
+                            has8 = true;
                             break;
-                        case "A":
-                            hasA = true;
+                        case "9":
+                            has9 = true;
                             break;
                     }
                 }
-                if (has10 && hasJ && hasQ && hasK && hasA) {
+                if (has5 && has6 && has7 && has8 && has9) {
                     return true;
                 }
             }
         }
         return false;
     }
-    
+
+
     /**
      * 手札がストレートフラッシュであるかどうかを判定するメソッド。
      * @param allCards 判定するカードのリスト。
      * @return 手札がストレートフラッシュである場合はtrue、そうでない場合はfalse。
      */    
     static boolean isStraightFlush(ArrayList<CardCard> allCards) {
-        if (isFlush(allCards) && (isStraight(allCards))) {
-            return true;
+        if (allCards.size() < 5) {
+            return false;
+        }
+    
+        // 各スートについて調べる
+        for (String suit : new String[]{SPADES, HEARTS, DIAMONDS, CLUBS}) {
+            // 指定したスートのカードを抽出
+            ArrayList<CardCard> sameSuitCards = new ArrayList<>();
+            for (CardCard card : allCards) {
+                if (card.getSuit().equals(suit)) {
+                    sameSuitCards.add(card);
+                }
+            }
+    
+            // 同じスートのカードが5枚以上存在し、それらが5から9の連続したランクを持つかどうかを調べる
+            if (sameSuitCards.size() >= 5) {
+                boolean has5 = false, has6 = false, has7 = false, has8 = false, has9 = false;
+                for (CardCard card : sameSuitCards) {
+                    switch (card.getRank()) {
+                        case "5":
+                            has5 = true;
+                            break;
+                        case "6":
+                            has6 = true;
+                            break;
+                        case "7":
+                            has7 = true;
+                            break;
+                        case "8":
+                            has8 = true;
+                            break;
+                        case "9":
+                            has9 = true;
+                            break;
+                    }
+                }
+                if (has5 && has6 && has7 && has8 && has9) {
+                    return true;
+                }
+            }
         }
         return false;
     }

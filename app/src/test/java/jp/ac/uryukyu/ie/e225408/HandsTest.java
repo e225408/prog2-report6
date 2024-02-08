@@ -7,20 +7,6 @@ public class HandsTest {
 
     @Test
 
-    void StraightFlushTest(){
-
-        GamePlayers testPlayer = new GamePlayers("Test");
-        testPlayer.setHand(new CardCard("クローバー", "5"));
-        testPlayer.setHand(new CardCard("クローバー", "6"));
-        testPlayer.setHand(new CardCard("クローバー", "7"));
-        testPlayer.setHand(new CardCard("クローバー", "8"));
-        testPlayer.setHand(new CardCard("クローバー", "9"));
-
-        boolean testResult = Hands.isStraightFlush(testPlayer.getHand());
-        assertTrue(testResult);
-
-    }
-
     void Flush(){
 
         GamePlayers testPlayer = new GamePlayers("Test");
@@ -31,6 +17,20 @@ public class HandsTest {
         testPlayer.setHand(new CardCard("スペード", "Q"));
 
         boolean testResult = Hands.isFlush(testPlayer.getHand());
+        assertTrue(testResult);
+
+    }
+
+    void StraightFlushTest(){
+
+        GamePlayers testPlayer = new GamePlayers("Test");
+        testPlayer.setHand(new CardCard("クローバー", "5"));
+        testPlayer.setHand(new CardCard("クローバー", "6"));
+        testPlayer.setHand(new CardCard("クローバー", "7"));
+        testPlayer.setHand(new CardCard("クローバー", "8"));
+        testPlayer.setHand(new CardCard("クローバー", "9"));
+
+        boolean testResult = Hands.isStraightFlush(testPlayer.getHand());
         assertTrue(testResult);
 
     }

@@ -2,7 +2,7 @@ package jp.ac.uryukyu.ie.e225408;
 
 /**
  * ポーカーゲームのボットプレイヤーを表現するクラス。
- * Playerクラスを継承しています。
+ * GamesPlayerクラスを継承しています。
  */
 public class BotBots extends GamePlayers{
     

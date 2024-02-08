@@ -23,6 +23,7 @@ public class CardDecks {
         String[] suits = { "Diamonds", "Clubs", "Spades","Hearts"};
         String[] ranks = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
         
+        
         for (String suit : suits) {
             for (String rank : ranks) {
                 cards.add(new CardCard(suit, rank));
